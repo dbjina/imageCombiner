@@ -106,18 +106,18 @@ public class ImageCombinerAppManager {
 
 		// 이미지 로드
 		System.out.println(getInputPath() + " 경로에서 이미지를 불러 옵니다...");
-		setImages(imageLoader.loadImages(getInputPath()));
 		System.out.println();
+		setImages(imageLoader.loadImages(getInputPath()));
 
 		// 이미지 합치기
 		System.out.println("총 " + images.size() + " 개의 이미지 파일을 합치고 있습니다...");
-		setCombinedImages(imageCombiner.combineImages((ArrayList<BufferedImage>) images));
 		System.out.println();
+		setCombinedImages(imageCombiner.combineImages((ArrayList<BufferedImage>) images));
 		
 		// 이미지 저장
 		System.out.println("총 " + getCombinedImages().size() + " 개의 이미지 파일로 생성 되고 있습니다...");
-		imageWriter.write(getOutputPath(), getOutputFilename(), (ArrayList<BufferedImage>) getCombinedImages());
 		System.out.println();
+		imageWriter.write(getOutputPath(), getOutputFilename(), (ArrayList<BufferedImage>) getCombinedImages());
 		
 		
 		// 완료 메시지

@@ -54,18 +54,21 @@ public class ImageCombinerApp {
 
 		System.out.println("**************************************");
 		System.out.println();
-		System.out.println(" Image Combiner는 여러 이미지를 합치기 위해서 만들어졌습니다.");
+		System.out.println(" Image Combiner는 여러 이미지를 한번에 합치기 위해서 만들어졌습니다.");
 		System.out.println(" Version 0.1");
 		System.out.println();
-		System.out.println(" - JPG로만 저장됩니다.");
-		System.out.println(" - 합친 이미지의 최대 길이가 65500 넘어갈 경우 그 다음으로 넘어갑니다.");
-		System.out.println(" - Image Combiner 실행 폴더의 이미지만 검색하고, 하위 폴더는 검색하지 않습니다.");
+		System.out.println(" - JPG, JPEG, PNG, GIF, BMP 이미지 파일들을 검색해서 JPG로만 저장");
+		System.out.println(" - 합친 이미지의 최대 길이가 65500 넘어갈 경우 다음 파일로 넘어감");
+		System.out.println(" - Image Combiner 실행 폴더의 이미지만 검색하고, 하위 폴더는 검색하지 않음");
 		System.out.println();
+		System.out.println(" 개발자 이메일 : dbjina@gmail.com");
+		System.out.println(" 개발자 블로그 : http://dbjina.blog.me/");
+		System.out.println(" github : https://github.com/dbjina/imageCombiner");
 		System.out.println("**************************************");
 		System.out.println();
 
-		System.out.println(" 진행 하시겠습니까? (y/n)");
-		System.out.print(" 입력 : ");
+		System.out.println("진행 하시겠습니까? (y/n)");
+		System.out.print("입력 : ");
 
 		@SuppressWarnings("resource")
 		Scanner scan = new Scanner(System.in);
@@ -74,7 +77,8 @@ public class ImageCombinerApp {
 		str = scan.next();
 
 		while (str.equals("y") == false && str.equals("n") == false) {
-			System.out.println(" 제대로된 명령어를 입력해주세요.");
+			System.out.println();
+			System.err.println(" 제대로된 명령어를 입력해주세요.");
 			System.out.println(" y 는 계속 진행");
 			System.out.println(" n 은 프로그램 종료");
 			System.out.println();

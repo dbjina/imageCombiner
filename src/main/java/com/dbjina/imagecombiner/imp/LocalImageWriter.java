@@ -38,16 +38,18 @@ public class LocalImageWriter implements ImageWriter {
 			try {
 				
 				if(file.exists() == true) {
+					String str = "";
 					System.out.println(file.getName() + " 파일이 이미 존재합니다.");
 					System.out.println("덮어 쓰시겠습니까? (y/n)");
-					String str = "";
+					System.out.print("입력 : ");
 
 					@SuppressWarnings("resource")
 					Scanner scan = new Scanner(System.in);
-					str = scan.next();
+					str = scan.nextLine();
 
 					while (str.equals("y") == false && str.equals("n") == false) {
-						System.out.println("제대로된 명령어를 입력해주세요.");
+						System.out.println();
+						System.err.println("제대로된 명령어를 입력해주세요.");
 						System.out.println("y 는 파일을 덮어쓰고 계속 진행");
 						System.out.println("n 은 프로그램 종료");
 						System.out.println();
@@ -59,6 +61,7 @@ public class LocalImageWriter implements ImageWriter {
 					if (str.equals("n") == true) {
 						CommonUtil.shutdown();
 					}
+					System.out.println();
 					System.out.println(file.getName() + " 파일 덮어 쓰는 중...");
 					System.out.println();
 				}

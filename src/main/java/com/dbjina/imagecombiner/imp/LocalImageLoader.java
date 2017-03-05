@@ -43,7 +43,7 @@ public class LocalImageLoader implements ImageLoader {
 		
 		// BufferedImage 리스트에 이미지 파일 등록
 		System.out.println("===========================");
-		System.out.println(" 로드된 이미지 파일");
+		System.out.println("로드된 이미지 파일");
 		System.out.println("===========================");
 		
 		for(int i=0; i<files.length; i++) {
