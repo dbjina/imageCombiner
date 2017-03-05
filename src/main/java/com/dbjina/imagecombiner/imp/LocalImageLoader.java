@@ -46,14 +46,15 @@ public class LocalImageLoader implements ImageLoader {
 		System.out.println(" 로드된 이미지 파일");
 		System.out.println("===========================");
 		
-		for(File file : files) {
+		for(int i=0; i<files.length; i++) {
 			try {
-				images.add(ImageIO.read(file));
-				System.out.println(" - " + file.getAbsolutePath());
+				images.add(ImageIO.read(files[i]));
+				System.out.println((i+1) + ". " + files[i].getName());
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
 		}
+		
 		System.out.println("===========================");
 		System.out.println();
 		return images;

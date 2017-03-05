@@ -81,12 +81,14 @@ public class ImageCombinerApp {
 			System.out.print("입력 : ");
 
 			str = scan.next();
+			
+			System.out.println();
 		}
 
 		if (str.equals("n") == true) {
 			CommonUtil.shutdown();
 		}
-
+		
 	}
 
 	// private static void displayMenu(ImageCombinerAppManager manager) {

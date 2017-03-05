@@ -22,7 +22,7 @@ public class LocalImageWriter implements ImageWriter {
 		if (file.isDirectory() == false) {
 
 			if (file.mkdirs() == true) {
-				System.out.println(" " + outputPath + " 폴더를 생성 하였습니다.");
+				System.out.println(outputPath + " 폴더를 생성 하였습니다.");
 				System.out.println();
 			}
 		}
@@ -38,8 +38,8 @@ public class LocalImageWriter implements ImageWriter {
 			try {
 				
 				if(file.exists() == true) {
-					System.out.println(" " + file.getName() + " 파일이 이미 존재합니다.");
-					System.out.println(" 덮어 쓰시겠습니까? (y/n)");
+					System.out.println(file.getName() + " 파일이 이미 존재합니다.");
+					System.out.println("덮어 쓰시겠습니까? (y/n)");
 					String str = "";
 
 					@SuppressWarnings("resource")
@@ -47,11 +47,11 @@ public class LocalImageWriter implements ImageWriter {
 					str = scan.next();
 
 					while (str.equals("y") == false && str.equals("n") == false) {
-						System.out.println(" 제대로된 명령어를 입력해주세요.");
-						System.out.println(" y 는 파일을 덮어쓰고 계속 진행");
-						System.out.println(" n 은 프로그램 종료");
+						System.out.println("제대로된 명령어를 입력해주세요.");
+						System.out.println("y 는 파일을 덮어쓰고 계속 진행");
+						System.out.println("n 은 프로그램 종료");
 						System.out.println();
-						System.out.print(" 입력 : ");
+						System.out.print("입력 : ");
 
 						str = scan.nextLine();
 					}
@@ -59,17 +59,17 @@ public class LocalImageWriter implements ImageWriter {
 					if (str.equals("n") == true) {
 						CommonUtil.shutdown();
 					}
-					System.out.println(" " + file.getName() + " 파일 덮어 쓰는 중...");
+					System.out.println(file.getName() + " 파일 덮어 쓰는 중...");
 					System.out.println();
 				}
 				
 				boolean isSuccess = ImageIO.write(images.get(i), getFileExtension(outputFilename), file); 
 				if(isSuccess == true) {
-					System.out.println(" " + file.getName() + " 파일이 생성되었습니다.");
+					System.out.println(file.getName() + " 파일이 생성되었습니다.");
 					System.out.println();
 				}
 				else {
-					System.err.println(" " + file.getName() + " 파일을 만드는데 실패했습니다.");
+					System.err.println(file.getName() + " 파일을 만드는데 실패했습니다.");
 					System.out.println();
 				}
 			} catch (IOException e) {
