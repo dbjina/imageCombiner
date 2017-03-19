@@ -64,6 +64,9 @@ public class ImageCombinerApp {
 		System.out.println(" 개발자 이메일 : dbjina@gmail.com");
 		System.out.println(" 개발자 블로그 : http://dbjina.blog.me/");
 		System.out.println(" github : https://github.com/dbjina/imageCombiner");
+		System.out.println();
+		System.out.println(" 라이센스(License)");
+		System.out.println(" - icon : https://www.iconfinder.com/icons/1055003/photographs_picture_pictures_polaroids_icon");
 		System.out.println("**************************************");
 		System.out.println();
 
